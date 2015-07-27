@@ -1,0 +1,18 @@
+<apex:page controller="wrapper">
+<apex:form >
+<apex:commandButton value="show" reRender="show"  action="{!test}"/>
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!list}" var="obj">
+        <apex:column >
+                <apex:selectList value="{!obj.value }" size="1">
+            <apex:selectOptions value="{!obj.sfdcFields}"></apex:selectOptions>    
+            </apex:selectList>
+            
+  </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+ 
+<apex:outputLabel id="show">{!list}</apex:outputLabel>
+    
+</apex:form>
+</apex:page>

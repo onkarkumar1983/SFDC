@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CRMG_WF__Today__c</fullName>
+        <formula>Today()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__Old_First_Name__c</fullName>
+        <label>Old First Name</label>
+        <length>50</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__Old_Last_Name__c</fullName>
+        <label>Old Last Name</label>
+        <length>50</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>ORGCUSTOM4_DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_OLD_FIRST_NAME__c</fullName>
+        <label>ORGCUSTOM4_OLD_FIRST_NAME</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_OLD_LAST_NAME__c</fullName>
+        <label>ORGCUSTOM4_OLD_LAST_NAME</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+</CustomObject>

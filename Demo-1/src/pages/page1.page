@@ -1,0 +1,9 @@
+<apex:page tabStyle="Lead" controller="controller">
+  <!-- Begin Default Content REMOVE THIS -->
+<apex:sectionHeader title="Home" subtitle="New Lead"/>
+<apex:form >
+    <apex:pageBlock title="Information"> 
+    {!c}
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

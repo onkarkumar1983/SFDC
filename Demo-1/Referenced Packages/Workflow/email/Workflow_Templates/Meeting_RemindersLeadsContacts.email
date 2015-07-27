@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<hr style="display: block; height: 3px;
+    border: 0; border-top: 8px solid #084B8A;
+    margin: 1em 0; padding: 0;background: #084B8A;">
+
+<h4 style='font-family: "Calibri"; font-size: 22px;color: #298A08;'>Appointment Confirmation</h4>
+<p style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Meeting Host:      {!Lead.OwnerFullName}{!Contact.OwnerFullName}</p>
+<p style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Company:     {!Lead.Company}{!Account.Name}</p>
+<p style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Subject:     {!Lead.Meeting_Subject__c}{!Contact.Meeting_Subject__c}</p>
+<p style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Date/Time:     {!Lead.Next_Meeting_Date_Time__c}{!Contact.00Ni000000FIAjk}</p>
+<p style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Attendee:      {!Lead.Name}{!Contact.Name}</p>
+
+<hr style="display: block; height: 2px;
+    border: 0; border-top: 1px solid #084B8A;
+    margin: 1em 0; padding: 0;background: #084B8A;width:80%">
+<p style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Location: {!Lead.Meeting_Location__c}{!Contact.Meeting_Location__c}</p>
+<hr style="display: block; height: 10px;
+    border: 0; border-top: 1px solid #084B8A;
+    margin: 1em 0; padding: 0;background: #084B8A;">
+
+</body>
+</html>

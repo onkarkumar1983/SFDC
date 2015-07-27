@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <fullName>Default</fullName>
+        <description>This will be used to create Leads from Lost Opps</description>
+        <displayedFields>
+            <field>FirstName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Company</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Phone</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Fax</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Email</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Street</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>City</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Country</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>PostalCode</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Default</label>
+    </fieldSets>
+    <fields>
+        <fullName>ActivityDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <externalId>false</externalId>
+        <label>Activity Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActivityDescription__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <externalId>false</externalId>
+        <label>Activity Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ActivitySubject__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <externalId>false</externalId>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Activity_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <externalId>false</externalId>
+        <label>Activity Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Activity_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Before_Meeting__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+Next_Meeting_Date_Time__c &gt; NOW(),
+Next_Meeting_Date_Time__c - NOW(),
+0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Before Meeting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Difference_from_Now_and_Next_Meeting__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Next_Meeting_Date_Time__c - Now()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Difference from Now and Next Meeting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Before_Meeting__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ROUND( 24 * (
+( 7 * FLOOR( ( CRMG_WF__Meeting_Date__c - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ) ) / 7) +
+MIN(7,
+MOD( CRMG_WF__Meeting_Date__c - DATETIMEVALUE( &apos;1900-01-08 16:00:00&apos; ), 7) +
+MIN( 1, 24 / 24 * ( MOD( CRMG_WF__Meeting_Date__c - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ), 1 ) ) )
+)
+)
+-
+( 7 * FLOOR( ( NOW() - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ) ) / 7) +
+MIN( 7,
+MOD( NOW() - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ), 7 ) +
+MIN( 1, 24 / 24 * ( MOD( NOW() - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ), 1) ) )
+)
+)
+),
+0 )</description>
+        <externalId>false</externalId>
+        <formula>IF(Difference_from_Now_and_Next_Meeting__c * 24 &gt; 0,Difference_from_Now_and_Next_Meeting__c * 24,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hours Before Meeting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meeting_Details__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <externalId>false</externalId>
+        <label>Meeting Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Meeting_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <externalId>false</externalId>
+        <label>Meeting Location</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meeting_Subject__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <externalId>false</externalId>
+        <label>Meeting Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minutes_Before_Meeting__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(Hours_Before_Meeting__c  * 60 &gt; 0,Hours_Before_Meeting__c  * 60,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Minutes Before Meeting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Meeting_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Next Meeting</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ProductInterest__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GC1000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GC5000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GC3000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Today__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Today ()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+</CustomObject>

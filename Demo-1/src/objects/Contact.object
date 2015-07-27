@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CRMG_WF__ActivityDate__c</fullName>
+        <label>Activity Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivityDescription__c</fullName>
+        <label>Activity Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivitySubject__c</fullName>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Status__c</fullName>
+        <label>Activity Status</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Type__c</fullName>
+        <label>Activity Type</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Checkbox</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Days_Before_Meeting__c</fullName>
+        <formula>IF(
+CRMG_WF__Next_Meeting_Date_Time__c  &gt; NOW(),
+CRMG_WF__Next_Meeting_Date_Time__c - NOW(),
+0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Before Meeting</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Difference_from_Now_and_Next_Meeting__c</fullName>
+        <formula>CRMG_WF__Next_Meeting_Date_Time__c - Now()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Difference from Now and Next Meeting</label>
+        <precision>18</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Hours_Before_Meeting__c</fullName>
+        <formula>IF(CRMG_WF__Difference_from_Now_and_Next_Meeting__c * 24 &gt; 0,CRMG_WF__Difference_from_Now_and_Next_Meeting__c * 24,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hours Before Meeting</label>
+        <precision>18</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Last_Interaction_assigned_to__c</fullName>
+        <label>Last Interaction assigned to</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contacts</relationshipName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Meeting_Date_del__c</fullName>
+        <label>Meeting Date</label>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Meeting_Details__c</fullName>
+        <label>Meeting Details</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Meeting_Location__c</fullName>
+        <label>Meeting Location</label>
+        <length>100</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Meeting_Subject__c</fullName>
+        <label>Meeting Subject</label>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Minutes_Before_Meeting__c</fullName>
+        <formula>IF(CRMG_WF__Hours_Before_Meeting__c * 60 &gt; 0,CRMG_WF__Hours_Before_Meeting__c * 60,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Minutes Before Meeting</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Next_Meeting_Date_Time__c</fullName>
+        <label>Next Meeting</label>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Today__c</fullName>
+        <formula>Today()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__Old_Title__c</fullName>
+        <label>Old Title</label>
+        <length>50</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>FN__Find_Nearby__c</fullName>
+        <formula>IF( ISPICKVAL( FN__Mapping_Status__c , &apos;Located&apos;), HYPERLINK( &quot;apex/FN__FindNearbymap?cid=&quot; &amp; Id,&quot;Map it!&quot;,&quot;_parent&quot;) , HYPERLINK( &quot;apex/FN__CGeoCode?id=&quot; &amp; Id,&quot;Locate Contact&quot;,&quot;_parent&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Find Nearby</label>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>FN__Lat__c</fullName>
+        <label>Contact Lat</label>
+        <precision>7</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>FN__Lon__c</fullName>
+        <label>Contact Lon</label>
+        <precision>7</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>FN__Mapping_Address__c</fullName>
+        <inlineHelpText>Contact&apos;s Mapping Address</inlineHelpText>
+        <label>Contact Mapping Address</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Mailing</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do Not Map</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FN__Mapping_Status__c</fullName>
+        <inlineHelpText>Contact&apos;s Mapping Status.</inlineHelpText>
+        <label>Contact Mapping Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Located Yet</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Located</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Problem with Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bad Google Key</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Google Exhausted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>ORGCUSTOM4_DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_OLD_TITLE__c</fullName>
+        <label>ORGCUSTOM4_OLD_TITLE</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <webLinks>
+        <fullName>FN__Map_Contacts</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Map Contacts</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+var selecteditems={!GETRECORDIDS($ObjectType.Account)}; 
+window.location= &quot;/apex/FN__FindNearbymap?clids=&quot;+selecteditems;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GMI_Show_Map_Button_Contact</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Show Map</masterLabel>
+        <openType>sidebar</openType>
+        <page>GoogleMapsInternationalContact</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>GMI_Show_Map_Link_Contact</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Show Map</masterLabel>
+        <openType>sidebar</openType>
+        <page>GoogleMapsInternationalContact</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Contact_MailingStreet}+{!Contact_MailingCity}+{!Contact_MailingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://www.google.com/search?q={!Contact_FirstName} {!Contact_LastName}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SendGmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Gmail</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>https://mail.google.com/mail?view=cm&amp;tf=0&amp;to={!Contact_Email}&lt;{!Contact_LastName}, {!Contact_FirstName}&gt;&amp;tf=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Contact_MailingCountry}&amp;csz={!Contact_MailingCity}+{!Contact_MailingState}+{!Contact_MailingPostalCode}+&amp;addr={!Contact_MailingAddress}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooWeather</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Weather</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://weather.yahoo.com/search/weather2?p={!Contact_MailingPostalCode}</url>
+    </webLinks>
+</CustomObject>

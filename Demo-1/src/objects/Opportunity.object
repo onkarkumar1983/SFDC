@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CRMG_WF__Account__c</fullName>
+        <formula>Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivityDate__c</fullName>
+        <label>Activity Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivityDescription__c</fullName>
+        <label>Activity Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivitySubject__c</fullName>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Status__c</fullName>
+        <label>Activity Status</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Subject__c</fullName>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Type__c</fullName>
+        <label>Activity Type</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Today__c</fullName>
+        <formula>Today ()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DB_Days__c</fullName>
+        <defaultValue>7</defaultValue>
+        <description>This is used for the &quot;Perfect Data&quot; SE tool</description>
+        <label>DB Days</label>
+        <precision>5</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <webLinks>
+        <fullName>CRMG_WF__Update_Quantity</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Update Quantity</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!requireScript(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+{!requireScript(&quot;/soap/ajax/20.0/apex.js&quot;)} 
+
+ var retStr; 
+ retStr = sforce.apex.execute(&quot;CRMG_WF.opportunityProcess&quot;,&quot;updateOpportunity&quot;,{orgid:&quot;{!$Organization.Id}&quot;,fldName:&quot;Name&quot;, fldvalue:&quot;Test Data12&quot;,oppId:&quot;{!Opportunity.Id}&quot;});
+
+if(retStr == &apos;false&apos;){
+alert(&quot;You Don&apos;t have permission&quot;);
+}else{
+window.parent.location.reload();
+}</url>
+    </webLinks>
+</CustomObject>

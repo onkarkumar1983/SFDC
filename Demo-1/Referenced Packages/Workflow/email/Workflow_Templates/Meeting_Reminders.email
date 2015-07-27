@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+Hi{!Lead.FirstName}.
+<br><br>
+Just a quick reminder of our meeting that starts in {!Lead.Minutes_Before_Meeting__c} minutes. 
+<br><br>
+<html>
+	<body>
+	
+		<table width="600px" cellpadding="2" cellspacing="2" border="0">
+			<tr>
+				<td colspan="2">
+				<hr style="display: block; height: 3px; border: 0; border-top: 1px solid #084B8A; margin: 1em 0; padding: 0;background: #084B8A;">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table border="0" width="600px" >
+						<tr>
+							<td><h4 style='font-family: "Calibri";font-size: 22px;color: #298A08;'>Appointment Confirmation</h4></td>
+							<td align="right"><img src="https://c.na15.content.force.com/servlet/servlet.ImageServer?id=015i0000005XebU&oid=00Di0000000fAzN&lastMod=1421683445000" width="200px" height="50px"/></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td width="150px" style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Meeting Host:</td>
+				<td width="450px" style='font-family: "Calibri";font-size: 18px;color: #000;'>{!Lead.Meeting_Location__c}</td>
+			</tr>
+			<tr>
+				<td width="150px" style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Phone:</td>
+				<td width="450px" style='font-family: "Calibri";font-size: 18px;color: #000;'>{!Lead.Phone}</td>
+			</tr>
+			<tr>
+				<td width="150px" style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Company:</td>
+				<td width="450px" style='font-family: "Calibri";font-size: 18px;color: #000;'>{!Lead.Company}</td>
+			</tr>
+			<tr>
+				<td width="150px" style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Subject:</td>
+				<td width="450px" style='font-family: "Calibri";font-size: 18px;color: #000;'>{!Lead.Meeting_Subject__c}</td>
+			</tr>
+			<tr>
+				<td width="150px" style='font-family: "Calibri";font-size: 18px;color: #0B3861;'>Date/Time:</td>
+				<td width="450px" style='font-family: "Calibri";font-size: 18px;color: #000;'>{!Lead.Next_Meeting_Date_Time__c}</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<hr style="display: block; height: 10px; border: 0; border-top: 1px solid #084B8A; margin: 1em 0; padding: 0;background: #084B8A;">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table border="0" width="600px" >
+						<tr>
+							<td width="540" style='font-family: "Calibri";font-size: 10px;color: #000;' align="right">Follow {Organaztion Name}</td>
+							<td align="right"><nobr><img src="https://c.na15.content.force.com/servlet/servlet.ImageServer?id=015i0000005XdDq&oid=00Di0000000fAzN&lastMod=1421683221000" width="30px" height="30px"/>
+					<img src="https://c.na15.content.force.com/servlet/servlet.ImageServer?id=015i0000005XdCn&oid=00Di0000000fAzN&lastMod=1421673564000" width="28px" height="28px" /></nobr></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+		</table>
+	
+</body>
+</html>

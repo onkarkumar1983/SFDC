@@ -1,0 +1,240 @@
+<messaging:emailTemplate recipientType="Contact"
+    relatedToType="Opportunity"
+    subject="Productline Items for Opportunity: {!relatedTo.name}"
+    replyTo="support@crmguidance.com" >
+    
+<messaging:htmlEmailBody >        
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Email Template</title>
+    
+
+    <style type="text/css" media="screen">
+        /* Linked Styles */
+        body { padding:0 !important; margin:0 !important; display:block !important; background:#ffffff; -webkit-text-size-adjust:none }
+        a { color:#003366; text-decoration:none }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+           background-color:#fff;
+        }
+
+    </style>
+</head>
+<body class="body" style="padding:0 !important; margin:0 !important; display:block !important; background:#ffffff; -webkit-text-size-adjust:none">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10" bgcolor="#ffffff">
+    <tr>
+        <td align="center" valign="top">
+            <table width="600" border="0" cellspacing="0" cellpadding="5" bgcolor="#e5eaef">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#ced7e1">
+                            <tr>
+                                <td>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="9" bgcolor="#ffffff">
+                                        <tr>
+                                            <td>
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f2f5f7">
+                                                    <tr>
+                                                        <td>
+                                                            <div style="font-size:0pt; line-height:0pt; height:25px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="25" style="height:25px" alt="" /></div>
+
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="35"></td>
+                                                                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left"><a href="#" target="_blank"><img src="https://c.na3.content.force.com/servlet/servlet.ImageServer?id=01550000001MHZD&oid=00D50000000JN23&lastMod=1419730797000" width="200" height="75" alt="" border="0" /></a></td>
+                                                                    <td class="date" style="color:#000000; font-family:Arial; font-size:12px; line-height:16px; text-align:right" valign="bottom"></td>
+                                                                
+                                                                </tr>
+                                                            </table>
+                                                            <div style="font-size:0pt; line-height:0pt; height:25px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="25" style="height:25px" alt="" /></div>
+
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="26"></td>
+                                                                    
+                                                                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="26"></td>
+                                                                </tr>
+                                                            </table>
+
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="36"></td>
+                                                                    <td>
+                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                            <tr>
+                                                                                <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="1" bgcolor="#e6ebf0"></td>
+                                                                                <td bgcolor="#ffffff">
+                                                                                    <div style="font-size:0pt; line-height:0pt; height:20px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="20" style="height:20px" alt="" /></div>
+
+                                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                        <tr>
+                                                                                            <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
+                                                                                            <td>
+                                                                                                <div style="font-size:0pt; line-height:0pt; height:1px; background:#ced7e1; "><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="1" style="height:1px" alt="" /></div>
+
+                                                                                                <div style="font-size:0pt; line-height:0pt; height:12px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="12" style="height:12px" alt="" /></div>
+
+                                                                                                <div class="h1-center" style="color:#003366; font-family:Arial; font-size:30px; line-height:34px; text-align:center; font-weight:normal">
+
+                                                                                                </div>
+                                                                                                <div class="h2-center" style="color:#003366; font-family:Arial; font-size:17px; line-height:21px; text-align:center; font-weight:normal">
+New Product Order for {!relatedTo.Account.Name} 
+                                                                                                </div>
+                                                                                                <div style="font-size:0pt; line-height:0pt; height:12px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="12" style="height:12px" alt="" /></div>
+
+                                                                                                <div style="font-size:0pt; line-height:0pt; height:1px; background:#ced7e1; "><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="1" style="height:1px" alt="" /></div>
+
+                                                                                                <div style="font-size:0pt; line-height:0pt; height:15px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="15" style="height:15px" alt="" /></div>
+
+
+                                                                                                <div class="text" style="color:#000000; font-family:Arial; font-size:11px; line-height:15px; text-align:left">
+                                                                
+
+
+<p>Hi {!recipient.name},</p>
+<p>Below is a list of products related to the Opportunity:<b> {!relatedTo.name}</b>.</p>
+<br/>Account: <i> {!relatedTo.Account.name}  </i>  
+<br/>Opportunity Owner: {!relatedTo.owner.name}
+<br/>Opportunity Amount: {!ROUND(relatedTo.Amount,0)} 
+<br/>Opportunity Close Date: {!relatedTo.CloseDate}</p>
+
+    <table id="t01" style="table-layout:fixed; box-shadow: 3px 3px 5px #888888;width:100%; border: 1px solid black;   border-collapse: collapse;">
+        <tr > 
+        
+            <th style="border: 1px solid black;
+    border-collapse: collapse;background-color: #606060 ; color: white;padding: 5px;text-align: left;">Product Name</th>
+            <th  style="border: 1px solid black;
+    border-collapse: collapse;background-color: #606060;color: white;padding: 5px;text-align: left;">Quantity</th>
+            <th  style="border: 1px solid black;
+    border-collapse: collapse;background-color: #606060;color: white;padding: 5px;text-align: left;">Unit Price</th>
+            <th  style="border: 1px solid black;
+    border-collapse: collapse;background-color: #606060;color: white;padding: 5px;text-align: left;">Total Price</th>
+        </tr>
+        <apex:repeat var="opp" value="{!relatedTo.OpportunityLineItems}">
+            <tr>
+               <td width="70%" style="WORD-WRAP :break-word;border: 1px solid black;
+    border-collapse: collapse;padding: 5px; text-align: left;">{!opp.PriceBookEntry.name}</td>
+               <td width="5%" style="WORD-WRAP :break-word;border: 1px solid black;
+    border-collapse: collapse;padding: 5px; text-align: left;">{!ROUND(opp.Quantity,0)}</td>
+               <td width="5%" style="WORD-WRAP :break-word;border: 1px solid black;
+    border-collapse: collapse;padding: 5px; text-align: left;">
+        <apex:outputText value="{0,number,#,###.00}">
+        <apex:param value="{!opp.UnitPrice}" />
+        </apex:outputText>
+    </td>
+               <td width="20%" style="WORD-WRAP :break-word;border: 1px solid black;
+    border-collapse: collapse;padding: 5px; text-align: left;">
+<apex:outputText value="{0,number,#,###.00}">
+        <apex:param value="{!opp.TotalPrice}" />
+        </apex:outputText>
+    </td>
+           </tr>
+    </apex:repeat>
+    </table>
+
+
+                                                                <div style="font-size:0pt; line-height:0pt; height:25px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="25" style="height:25px" alt="" /></div>
+                                                                                                </div>
+                                                                </td>
+                                                                <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
+                                                                </tr>           </table>                                                            </td>
+                                                                <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="1" bgcolor="#e6ebf0"></td>
+                                                                </tr>
+</table>
+</td>
+<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="36"></td>
+</tr>
+</table>
+
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="36"></td>
+<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="1" bgcolor="#e6ebf0"></td>
+<td bgcolor="#ffffff">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
+<td>
+<div style="font-size:0pt; line-height:0pt; height:30px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="30" style="height:30px" alt="" /></div>
+
+
+<div class="text" style="color:#000000; font-family:Arial; font-size:11px; line-height:15px; text-align:left">
+        <br>                                                        {!$User.Username} <br />
+{!$User.Email}, {!$User.CompanyName}
+</div>
+                                                                <div style="font-size:0pt; line-height:0pt; height:30px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="30" style="height:30px" alt="" /></div>
+
+                                                                </td>
+<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
+</tr>
+</table>
+<div style="font-size:0pt; line-height:0pt; height:1px; background:#e6ebf0; "><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="1" style="height:1px" alt="" /></div>
+</td>
+                                                                <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="1" bgcolor="#e6ebf0"></td>
+                                                                <td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="36"></td>
+                                                                </tr>
+                                                            </table>
+                                                            <div style="font-size:0pt; line-height:0pt; height:36px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="36" style="height:36px" alt="" /></div>
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table width="600" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="footer" style="color:#003366; font-family:Arial; font-size:9px; line-height:13px; text-align:left">
+                        <div style="font-size:0pt; line-height:0pt; height:15px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="15" style="height:15px" alt="" /></div>
+
+                        <div class="address" style="color:#000000; font-family:Arial; font-size:11px; line-height:16px; text-align:left">
+{!$Organization.Name} | {!$Organization.City}, {!$Organization.State}  | {!$Organization.Phone} | <a href="http://www.crmguidance.com" target="_blank" class="link-u" style="color:#003366; text-decoration:underline"><span class="link-u" style="color:#003366; text-decoration:underline">www.crmguidance.com</span></a>
+                        </div>
+                        <div style="font-size:0pt; line-height:0pt; height:15px"><img src="https://c.na11.content.force.com/servlet/servlet.FileDownload?file=015G0000005qWEi" width="1" height="15" style="height:15px" alt="" /></div>
+
+.
+                        <br /><br />
+                                            </td>
+                </tr>
+            </table>
+                        
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+</messaging:htmlEmailBody> 
+    
+<messaging:plainTextEmailBody >
+Hi {!recipient.name},
+ 
+Below is a list of products related to the Opportunity: {!relatedTo.name}
+
+Account: {!relatedTo.Account.name}
+Opportunity Owner: {!relatedTo.owner.name}
+Opportunity Amount: {!ROUND(relatedTo.Amount,0)} 
+Opportunity Close Date: {!relatedTo.CloseDate}  
+
+
+[ Product Name ] - [ Quantity ] - [ Units ] - [ Total Price ]
+-------------------------------------------------------------------------
+
+<apex:repeat var="opp" value="{!relatedTo.OpportunityLineItems}">
+[ {!opp.PriceBookEntry.name} ] - [ {!ROUND(opp.Quantity,0)} ] - [ {!ROUND(opp.UnitPrice,0)} ] - [ {!ROUND(opp.TotalPrice,0)} ]
+</apex:repeat>
+
+</messaging:plainTextEmailBody>       
+        
+</messaging:emailTemplate>

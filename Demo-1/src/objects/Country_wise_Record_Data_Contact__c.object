@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Created_By__c</fullName>
+        <label>Created By</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>Total__c</fullName>
+        <label>Total Records</label>
+        <precision>5</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <label>Country wise Record Data Contact</label>
+    <nameField>
+        <displayFormat>REC - {00000}</displayFormat>
+        <label>Country wise Record Data Contact Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Country wise Record Data Contacts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

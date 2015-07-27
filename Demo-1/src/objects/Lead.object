@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CRMG_WF__ActivityDate__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <label>Activity Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivityDescription__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <label>Activity Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivitySubject__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Status__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <label>Activity Status</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Type__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time a Task is set to &quot;Completed&quot;. It allows you to build workflow rules based on specific tasks that have been completed.</description>
+        <label>Activity Type</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Days_Before_Meeting__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <formula>IF(
+CRMG_WF__Next_Meeting_Date_Time__c &gt; NOW(),
+CRMG_WF__Next_Meeting_Date_Time__c - NOW(),
+0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Before Meeting</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Difference_from_Now_and_Next_Meeting__c</fullName>
+        <formula>CRMG_WF__Next_Meeting_Date_Time__c - Now()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Difference from Now and Next Meeting</label>
+        <precision>18</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Hours_Before_Meeting__c</fullName>
+        <description>ROUND( 24 * (
+( 7 * FLOOR( ( CRMG_WF__Meeting_Date__c - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ) ) / 7) +
+MIN(7,
+MOD( CRMG_WF__Meeting_Date__c - DATETIMEVALUE( &apos;1900-01-08 16:00:00&apos; ), 7) +
+MIN( 1, 24 / 24 * ( MOD( CRMG_WF__Meeting_Date__c - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ), 1 ) ) )
+)
+)
+-
+( 7 * FLOOR( ( NOW() - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ) ) / 7) +
+MIN( 7,
+MOD( NOW() - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ), 7 ) +
+MIN( 1, 24 / 24 * ( MOD( NOW() - DATETIMEVALUE( &apos;1900-01-08 00:00:00&apos; ), 1) ) )
+)
+)
+),
+0 )</description>
+        <formula>IF(CRMG_WF__Difference_from_Now_and_Next_Meeting__c * 24 &gt; 0,CRMG_WF__Difference_from_Now_and_Next_Meeting__c * 24,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hours Before Meeting</label>
+        <precision>18</precision>
+        <scale>1</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Meeting_Details__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <label>Meeting Details</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Meeting_Location__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <label>Meeting Location</label>
+        <length>100</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Meeting_Subject__c</fullName>
+        <description>This field is added by Workflow fro Professional Edition. Its populated by a trigger, each time an Event is scheduled&quot;. It allows you to build workflow rules based on specific meetings that have been created. It also enables your to leverage  merging Meeting details into email templates.</description>
+        <label>Meeting Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Minutes_Before_Meeting__c</fullName>
+        <formula>IF(CRMG_WF__Hours_Before_Meeting__c  * 60 &gt; 0,CRMG_WF__Hours_Before_Meeting__c  * 60,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Minutes Before Meeting</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Next_Meeting_Date_Time__c</fullName>
+        <label>Next Meeting</label>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ProductInterest__c</fullName>
+        <label>Product Interest</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GC1000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GC5000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GC3000 series</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Today__c</fullName>
+        <formula>Today ()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FN__Do_Not_Map__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Do Not Map</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FN__Find_Nearby__c</fullName>
+        <formula>IF( ISPICKVAL(FN__Mapping_Status__c , &apos;Located&apos;),  HYPERLINK( &quot;apex/FN__FindNearbymap?aid=null&amp;lid=&quot; &amp; Id,&quot;Map it!&quot;,&quot;_parent&quot;) ,   HYPERLINK( &quot;apex/FN__LGeoCode?id=&quot; &amp; Id,&quot;Locate Lead&quot;,&quot;_parent&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Find Nearby</label>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>FN__Lat__c</fullName>
+        <label>Latitude</label>
+        <precision>7</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>FN__Lon__c</fullName>
+        <label>Longitude</label>
+        <precision>7</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>FN__Mapping_Status__c</fullName>
+        <label>Mapping Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Located Yet</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Located</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Problem with Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SFGA__CorrelationID__c</fullName>
+        <defaultValue>&quot;none&quot;</defaultValue>
+        <description>The Correlation ID Field is used by Salesforce for Google AdWords for automatic correlation of web information with new leads created through a standard web-to-lead form</description>
+        <label>CorrelationID</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>SFGA__Correlation_Data__c</fullName>
+        <defaultValue>&quot;none&quot;</defaultValue>
+        <description>The Correlation Data field is designed for use by Salesforce for Google AdWords to store all relevant lead tracking information about a web generated lead</description>
+        <label>Correlation Data</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SFGA__Web_Source__c</fullName>
+        <defaultValue>&quot;none&quot;</defaultValue>
+        <description>This field is designed for future use by Salesforce for Google AdWords as an alternative to the Lead Source field for web generated leads.</description>
+        <label>Web Source</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <webLinks>
+        <fullName>AltavistaNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Altavista News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://news.altavista.com/search?nc=0&amp;q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FN__Map_Leads</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Map Leads</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+var selecteditems={!GETRECORDIDS($ObjectType.Account)}; 
+window.location= &quot;/apex/FN__FindNearbymap?llids=&quot;+selecteditems;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead_Street}+{!Lead_City}+{!Lead_State}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>HooversProfile</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Hoovers Profile</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://search.hoovers.com/cgi-bin/hol_search?which=company&amp;query_string={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SendGmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Gmail</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>https://mail.google.com/mail?view=cm&amp;tf=0&amp;to={!Lead_Email}&lt;{!Lead_LastName}, {!Lead_FirstName}&gt;&amp;tf=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Lead_Country}&amp;csz={!Lead_City}+{!Lead_State}+{!Lead_PostalCode}+&amp;addr={!Lead_Address}</url>
+    </webLinks>
+</CustomObject>

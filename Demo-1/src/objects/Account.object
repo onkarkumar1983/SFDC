@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CRMG_WF__ActivityDate__c</fullName>
+        <label>Activity Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivityDescription__c</fullName>
+        <label>Activity Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivitySubject__c</fullName>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Status__c</fullName>
+        <label>Activity Status</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Type__c</fullName>
+        <label>Activity Type</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__CheckBox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>CheckBox</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Today__c</fullName>
+        <formula>Today()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__Old_Name__c</fullName>
+        <label>Old Name</label>
+        <length>50</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>FN__Find_Nearby__c</fullName>
+        <formula>IF( ISPICKVAL( FN__Mapping_Status__c  , &apos;Located&apos;), HYPERLINK( &quot;apex/FN__FindNearbymap?lid=null&amp;aid=&quot; &amp; Id,&quot;Map it!&quot;,&quot;_parent&quot;) , HYPERLINK( &quot;apex/FN__AGeoCode?id=&quot; &amp; Id,&quot;Locate Account&quot;,&quot;_parent&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Find Nearby</label>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>FN__Lat__c</fullName>
+        <label>Latitude</label>
+        <precision>7</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>FN__Lon__c</fullName>
+        <label>Longitude</label>
+        <precision>7</precision>
+        <scale>2</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>FN__Mapping_Status__c</fullName>
+        <label>Mapping Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Located Yet</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Located</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Problem with Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bad Google Key</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Google Exhausted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FN__Which_Address__c</fullName>
+        <label>Mapping Address</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Billing</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do Not Map</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>ORGCUSTOM4_DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_OLD_NAME__c</fullName>
+        <label>ORGCUSTOM4_OLD_NAME</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>Partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Partner</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_Count__c</fullName>
+        <label>Total Count</label>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <validationRules>
+        <fullName>Total_Count</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Total_Count__c &gt; 1,true,false)</errorConditionFormula>
+        <errorMessage>Error</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>AltavistaNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Altavista News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://news.altavista.com/search?nc=0&amp;q={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FN__Map_Accounts</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Map Accounts</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+var selecteditems={!GETRECORDIDS($ObjectType.Account)}; 
+window.location= &quot;/apex/FN__FindNearbymap?alids=&quot;+selecteditems;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GMI_Show_Map_Button_Account</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Show Map</masterLabel>
+        <openType>sidebar</openType>
+        <page>GoogleMapsInternationalAccount</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>GMI_Show_Map_Link_Account</fullName>
+        <availability>online</availability>
+        <description>Show Google Map</description>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Show Map</masterLabel>
+        <openType>sidebar</openType>
+        <page>GoogleMapsInternationalAccount</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Account_BillingStreet}+{!Account_BillingCity}+{!Account_BillingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://www.google.com/news?&amp;q={!Account_Name}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://www.google.com/search?q={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>HooversProfile</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Hoovers Profile</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>http://search.hoovers.com/cgi-bin/hol_search?which=company&amp;query_string={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Account_BillingCountry}&amp;csz={!Account_BillingCity}+{!Account_BillingState}+{!Account_BillingPostalCode}+&amp;addr={!Account_BillingAddress}</url>
+    </webLinks>
+</CustomObject>

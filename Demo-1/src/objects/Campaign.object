@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CRMG_WF__ActivityDate__c</fullName>
+        <label>Activity Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivityDescription__c</fullName>
+        <label>Activity Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivitySubject__c</fullName>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>DB_Days__c</fullName>
+        <defaultValue>7</defaultValue>
+        <description>This is used for the &quot;Perfect Data&quot; SE tool</description>
+        <label>DB Days</label>
+        <precision>5</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__Old_Name__c</fullName>
+        <label>Old Name</label>
+        <length>50</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>ORGCUSTOM4_DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_OLD_NAME__c</fullName>
+        <label>ORGCUSTOM4_OLD_NAME</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <webLinks>
+        <fullName>ViewAllCampaignMembers</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View All Campaign Members</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>/camp/rptcmpgncalldown.jsp?scope=1&amp;scopeid={!Campaign_Name}</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>ViewCampaignInfluenceReport</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasScrollbars>true</hasScrollbars>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View Campaign Influence Report</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <url>/00O?rt=117&amp;break0=CAN&amp;scope=1&amp;scopeid_lkid={!Campaign.Id}&amp;scopeid={!Campaign_Name}&amp;c=CAN&amp;c=MR&amp;c=PCS&amp;c=CFN&amp;c=RN&amp;c=ON&amp;c=OA&amp;c=OS&amp;c=OCD&amp;c=AN&amp;s=OA&amp;duel0=CAN%2CMR%2CCFN%2CRN%2CAN%2CON%2CPCS%2COS%2COCD%2COA&amp;details=yes&amp;format=t</url>
+        <width>500</width>
+    </webLinks>
+</CustomObject>

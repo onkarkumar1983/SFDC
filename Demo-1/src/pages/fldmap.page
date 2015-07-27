@@ -1,0 +1,15 @@
+<apex:page controller="fldMapcls">
+<apex:sectionHeader title="Field Map" subtitle="Objects"/>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageblockSectionItem >
+                    <apex:outputLabel >Select Object</apex:outputLabel>
+                        <apex:selectRadio value="{!ObjectName}">
+                            <apex:selectOptions value="{!OBjects}"/>
+                         </apex:selectRadio>
+                 </apex:pageblockSectionItem>
+             </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

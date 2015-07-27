@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CRMG_WF__ActivityDate__c</fullName>
+        <label>Activity Date</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivityDescription__c</fullName>
+        <label>Activity Description</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__ActivitySubject__c</fullName>
+        <label>Activity Subject</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Status__c</fullName>
+        <label>Activity Status</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Activity_Type__c</fullName>
+        <label>Activity Type</label>
+        <length>255</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CRMG_WF__Today__c</fullName>
+        <formula>TODAY()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DB_Case_Duration_Hours__c</fullName>
+        <label>DB Case Duration Hours</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>DB_Hours__c</fullName>
+        <description>This is used for the &quot;Perfect Data&quot; SE tool</description>
+        <label>DB Hours</label>
+        <precision>5</precision>
+        <scale>0</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>DateTime_Closed_c__c</fullName>
+        <label>DateTime Closed</label>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DateTime_Opened_c__c</fullName>
+        <label>DateTime Opened</label>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__Old_Description__c</fullName>
+        <label>Old Description</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EDY_ORGCUSTOM__Old_Subject__c</fullName>
+        <label>Old Subject</label>
+        <length>80</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>ORGCUSTOM4_DB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>ORGCUSTOM4_DB</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Org_Cust_Case_ID__c</fullName>
+        <label>Org Cust Case ID</label>
+        <length>10</length>
+        <type>Text</type>
+    </fields>
+</CustomObject>
