@@ -17,7 +17,7 @@ public with sharing class ChatterAssassin {
 				for(FeedComment fc : fi.feedComments)	
 				{
 					commentList.add(new wrappedPost(fc));
-					System.debug('test Demo');
+					
 				}
 			}
 			if(fi.feedTrackedChanges.size() > 0)
